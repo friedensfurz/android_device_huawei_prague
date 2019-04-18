@@ -177,9 +177,11 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/releasetools/releasetools.hi6250.sh:$(TARGET_COPY_OUT_SYSTEM)/bin/releasetools.hi6250.sh
 
 # Remove Packages
+ifeq ($(TARGET_AOSP_BASED),)
 PRODUCT_PACKAGES += \
     RemovePackages \
     RemovePackages2
+endif
 
 # Selinux
 PRODUCT_COPY_FILES += \

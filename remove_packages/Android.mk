@@ -1,5 +1,6 @@
 LOCAL_PATH := $(call my-dir)
 
+ifeq ($(TARGET_AOSP_BASED),)
 include $(CLEAR_VARS)
 LOCAL_MODULE := RemovePackages
 LOCAL_MODULE_TAGS := optional
@@ -17,3 +18,4 @@ LOCAL_OVERRIDES_PACKAGES := MusicFX
 LOCAL_UNINSTALLABLE_MODULE := true
 LOCAL_CERTIFICATE := PRESIGNED
 include $(BUILD_PREBUILT)
+endif
