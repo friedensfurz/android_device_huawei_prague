@@ -65,6 +65,9 @@ PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_telephony.xml:system/etc/media_codecs_google_telephony.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_video.xml:system/etc/media_codecs_google_video.xml
 
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/prebuilt/etc/media-codec-blacklist:system/etc/media-codec-blacklist
+
 # Device
 #$(call inherit-product, device/huawei/hi6250-common/device.mk)
 
@@ -175,7 +178,8 @@ PRODUCT_COPY_FILES += \
 
 # Remove Packages
 PRODUCT_PACKAGES += \
-    RemovePackages
+    RemovePackages \
+    RemovePackages2
 
 # Selinux
 PRODUCT_COPY_FILES += \
@@ -212,3 +216,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.wifi.hostapd@1.0 \
     android.hardware.wifi@1.2
+
+# Speed-up stuff
+PRODUCT_PROPERTY_OVERRIDES += \
+    dalvik.vm.image-dex2oat-filter=verify-none

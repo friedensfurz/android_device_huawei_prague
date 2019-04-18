@@ -192,10 +192,6 @@
          capability can provide power savings when wifi needs to be always kept on. -->
     <bool name="config_wifi_background_scan_support">true</bool>
 
-    <!-- When true use the linux /dev/input/event subsystem to detect the switch changes
-         on the headphone/microphone jack. When false use the older uevent framework. -->
-    <bool name="config_useDevInputEventForAudioJack">true</bool>
-
     <!-- Allow screen mirroring/miracast -->
     <bool name="config_enableWifiDisplay">true</bool>
 
@@ -220,5 +216,15 @@
     <!-- Does the battery LED support multiple colors?
          Used to decide if the user can change the colors -->
     <bool name="config_multiColorBatteryLed">true</bool>
+
+    <!-- FP Keys -->
+    <bool name="config_showNavigationBar">true</bool>
+    <bool name="config_supportSystemNavigationKeys">true</bool>
+
+    <!-- Indicate whether the lid state impacts the accessibility of
+    the navigation buttons.  0 means it doesn't, 1 means it is accessible
+    when the lid is open, 2 means it is accessible when the lid is
+    closed.  The default is 0. -->
+    <integer name="config_lidNavigationAccessibility">1</integer>
 
 </resources>

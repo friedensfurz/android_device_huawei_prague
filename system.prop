@@ -24,7 +24,28 @@ persist.sys.radio.huawei=true
 # Sdcard
 ro.statsd.enable=false
 ro.sys.sdcardfs=1
+persist.sys.adoptable_fbe=true
 
 # Security Patches
 ro.build.version.security_patch_sys=2019-04-05
 
+# Fingerprint Gestures
+sys.fpnav.enabled=1
+
+# MediaCodec
+persist.sys.google_avc_enc=0 
+persist.sys.sr_google_avc_enc=1 
+persist.debug.wfd.enable=0 
+
+# Gpu Test
+debug.egl.hw=1 
+debug.egl.profiler=1 
+debug.hwui.use_buffer_age=false 
+debug.performance.tuning=1 
+debug.sf.hw=1 
+hwui.disable_vsync=true 
+ro.config.enable.hw_accel=true 
+video.accelerate.hw=1
+
+# Always generate dex pre-opt in system image
+ro.cp_system_other_odex=0
